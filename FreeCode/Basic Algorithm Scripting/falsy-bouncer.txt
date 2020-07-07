@@ -1,0 +1,11 @@
+function bouncer(arr) {
+  let copy =[]
+  for(let i = 0;i<arr.length;i++){
+    if(arr[i]){
+        copy.push(arr[i])
+    }
+  }
+  return copy;
+}
+
+bouncer([7, "ate", "", false, 9]);

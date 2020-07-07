@@ -1,0 +1,21 @@
+function titleCase(str) {
+  let arrayNew = str.split('');
+  for(let i=0; i<arrayNew.length;i++){
+    if(i==0){
+      arrayNew[i]=arrayNew[i].toUpperCase();
+      i++;
+    }
+    if(arrayNew[i]==' '){
+      arrayNew[i+1]=arrayNew[i+1].toUpperCase();
+      i++;
+    }
+    else{
+      arrayNew[i]=arrayNew[i].toLowerCase();
+    }
+  }
+  console.log(arrayNew)
+  
+  return arrayNew.join("");
+}
+
+titleCase("sHoRt AnD sToUt");

@@ -1,0 +1,26 @@
+function mutation(arr) {
+  let first = arr[0]
+  let second = arr[1]
+  let count = 0;
+  let copy = []
+  for(let i=0;i<second.length;i++){
+    for(let j=0;j<first.length;j++){
+      if(first[j].toLowerCase()==second[i].toLowerCase()){
+        count ++;
+        j++;
+        copy.push(second[i])
+        break;
+      }
+    }
+  }
+    console.log(count)
+    console.log(copy)
+  if(count==second.length){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+mutation(["Mary", "Aarmy"]);

@@ -1,0 +1,22 @@
+function chunkArrayInGroups(arr, size) {
+  var copy=[]
+  var final =[]
+  var count = 0;
+  for(let i=0;i<arr.length;i++){
+    if(count==size){
+      final.push(copy)
+      count=1
+      copy=[]
+      copy.push(arr[i])
+    }
+    else{
+      copy.push(arr[i])
+      count++;
+    }
+  }
+  final.push(copy)
+  console.log(final)
+  return final;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);

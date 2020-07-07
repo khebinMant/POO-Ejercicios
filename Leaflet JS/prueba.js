@@ -25,6 +25,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 dibujarLineas(puntosCasaInsitutos);
 distanciaEnKm(puntosCasaInsitutos);
 distanciaDosPuntos(puntosCasaInsitutos);
+ordenarDistancias();
 dibujarPin(puntosCasaInsitutos,compañerosCasa);
 
 
@@ -74,7 +75,7 @@ function distanciaDosPuntos(puntos){
                 auxArray = puntos[i][j];
                 distancia = Math.sqrt(Math.pow(institutoX-auxArray[0],2)+Math.pow(institutoY-auxArray[1],2))
                 distanciasDecimales.push(distancia);
-                console.log(distancia);
+                //console.log(distancia);
             }
         }
     }
@@ -99,15 +100,21 @@ function distanciaEnKm(puntos){
         }
     }
 }
+function ordenarDistancias(){
+    let aux=0;
+    for(let i=1 ;i<distanciasKm;i++){
+        for(let j=0;j<distanciasKm-1;j++){
+            if(distanciasKm[j]>distanciasKm[j+1]){
+                aux = distanciasKm[j];
+                distanciasKm[j]=distanciasKm[j+1];
+                distanciasKm[j+1]=auxS
+            }
+        }
+    }
+    
+    console.log(Math.min.apply(null,distanciasKm))
+    console.log(Math.max.apply(null,distanciasKm))
 
+    console.log(distanciasKm)
+}
 
-
-/*var from = turf.point([-0.355708, -78.528793]);
-var to = turf.point([-0.225069,-78.5168959]);
-var options = {units: 'kilometers'};
-
-var distance = turf.distance(from, to, options);
-console.log(distance)*/
-/*var line = turf.lineString([[-0.355708, -78.528793], [-0.225069,-78.5168959]]);
-var length = turf.length(line, {units: 'kilometers'});
-console.log(length)*/
