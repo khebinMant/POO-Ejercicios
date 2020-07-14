@@ -1,0 +1,11 @@
+{
+  "name": "nodepackagemanager",
+  "version": "1.0.0",
+  "description": "FreeCodeExercices",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Khabin",
+  "license": "ISC"
+}

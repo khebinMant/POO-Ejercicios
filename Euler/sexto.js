@@ -1,16 +1,32 @@
 class Squares{
-    constructor(numero){
-        this.numero=numero;
-        this.sumaCuadrados=0;
-        this.suma=0;
+    constructor(){
+        this.numero;
+        this.resultado;
     }
+    getNumero(){
+        return this.numero
+    }
+    setNumero(numero){
+        this.numero=numero;
+    }
+    getResultado(){
+        return this.resultado;
+    }
+
+
+    
     calcularDiferencia(){
+        let sumaCuadrados=0;
+        let suma=0;
         for(let i=1;i<=this.numero;i++){
-            this.sumaCuadrados+= Math.pow(i,2);
-            this.suma+=i;
+            sumaCuadrados+= Math.pow(i,2);
+            suma+=i;
         }
-        return Math.pow(this.suma,2)-this.sumaCuadrados
+        this.resultado= Math.pow(suma,2)-sumaCuadrados
+        console.log(this.resultado)
     }
 }
-var square = new Squares(20);
-console.log(square.calcularDiferencia());
+var square = new Squares();
+square.setNumero(100);
+square.calcularDiferencia();
+//console.log(square.getResultado());

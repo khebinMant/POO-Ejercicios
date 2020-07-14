@@ -1,6 +1,6 @@
 class Primos{
-    constructor(numero){
-        this.numero=numero
+    constructor(){
+        this.numero;
         this.iterador = 2
     }
     encontrar(){
@@ -13,8 +13,20 @@ class Primos{
             }
         }
         return this.iterador;
-        
     }
+    getIterador () {
+       return this.iterador;
+    }
+    setNumero(numero){
+        this.numero=numero;
+    }
+    getNumero(){
+        return this.numero;
+    }
+    
 }
-var primo = new Primos(600851475143)
+var primo = new Primos()
+
+primo.setNumero(600851475143);
+
 console.log(primo.encontrar()); 

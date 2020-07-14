@@ -2,6 +2,7 @@ class Pitagoras{
     constructor(){
         this.condicion=0
     }
+    
     encontrarProducto(){
         for(let a=1;a<=500;a++){
             for(let b=1;b<=500;b++){

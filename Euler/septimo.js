@@ -1,10 +1,19 @@
 class Primos{
-    constructor(position){
-        this.position = position
+    constructor(){
+        this.position ;
         this.contador = 0;
         this.primosContador = 0;
         this.primosArray = []
     }
+
+    setPosition(position){
+        this.position=position;
+    }
+    getPosition(){
+        return this.position;
+    }
+
+
     hallarPosicion(){
             let i=1;
             while(this.primosContador!=this.position){
@@ -25,7 +34,7 @@ class Primos{
             }
             return this.primosArray[this.primosArray.length-1]
         }
-
 }
-var primo = new Primos(10001)
+var primo = new Primos()
+primo.setPosition(1001);
 console.log(primo.hallarPosicion())
