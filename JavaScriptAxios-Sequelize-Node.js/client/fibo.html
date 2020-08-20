@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fibonacci Solver</title>
+</head>
+<body>
+    <h1>Fibonacci Solver</h1>
+    <p>Bienvenido amante de las matemáticas,  esta página es un generador de la serie Fibonacci</p>
+    <p>Por favor ingresa la información solicitada y luego de clic en el botón generar</p>
+    <form action="">
+        <label for="fibo1">Ingrese el primer elemento de la serie: </label>
+        <input   type="text" name="fibo1" id="fibo1">
+        <br>
+        <label for="fibo2">Ingrese el segundo elemento de la serie: </label>
+        <input  type="text" name="fibo2" id="fibo2">
+        <br>
+        <label for="maximo">Ingrese el número máximo de la serie: </label>
+        <input   type="text" name="maximo" id="maximo">
+        <br>
+        <br>
+        <input onclick="llamarApi()" type="button" value="Calcular serie" id="botonSolver">
+        <input onclick="traerInformacion()" type="button" value="Mostrar historial de calculos" id="botonSolver">
+        <p id="showData"></p>
+        <hr>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="fibo.js"></script>
+
+</body>
